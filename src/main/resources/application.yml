@@ -1,0 +1,33 @@
+## default connection pool
+debug: true
+spring:
+  sql:
+    init:
+      platform: postgresql
+      mode: <!-- How do you want to deal with the schema ?-->
+    output:
+      ansi:
+        enabled: always
+  datasource:
+    url: <!-- your URL here -->
+    username: <!-- username -->
+    password: <!-- password -->
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: <!-- To generate schema or not ? -->
+    defer-datasource-initialization: true
+  data:
+    mongodb:
+      uri:  <!-- your URL here -->
+      database: reviews
+
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: ERROR
