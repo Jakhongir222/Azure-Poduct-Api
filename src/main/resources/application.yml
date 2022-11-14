@@ -4,26 +4,26 @@ spring:
   sql:
     init:
       platform: postgresql
-      mode: <!-- How do you want to deal with the schema ?-->
+      mode: always
     output:
       ansi:
         enabled: always
   datasource:
-    url: <!-- your URL here -->
-    username: <!-- username -->
-    password: <!-- password -->
+    url: jdbc:postgres://${POSTGRES_USR}:${POSTGRES_PWD}@mouse.db.elephantsql.com/${POSTGRES_USR}
+    username: ${POSTGRES_USR}
+    password: ${POSTGRES_PWD}
     hikari:
       connectionTimeout: 20000
       maximumPoolSize: 5
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: <!-- To generate schema or not ? -->
+      ddl-auto: update
     defer-datasource-initialization: true
   data:
     mongodb:
-      uri:  <!-- your URL here -->
-      database: reviews
+      uri:  mongodb+srv://${MONGODB_USR}:${MONGODB_PWD}@ajajanas.twyihs3.mongodb.net/test
+      database: test
 
 logging:
   level:
