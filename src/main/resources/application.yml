@@ -9,7 +9,7 @@ spring:
       ansi:
         enabled: always
   datasource:
-    url: jdbc:postgres://${POSTGRES_USR}:${POSTGRES_PWD}@mouse.db.elephantsql.com/${POSTGRES_USR}
+    url: jdbc:postgres://mouse.db.elephantsql.com/trsdjhyx
     username: ${POSTGRES_USR}
     password: ${POSTGRES_PWD}
     hikari:

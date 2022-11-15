@@ -49,7 +49,7 @@ class ProductReviewRepositoryTest extends JfsLabJpaPostgresqlApplicationTests {
     assertThat(reviews).hasSize(2);
     assertThat(reviews.get(0).getDocumentId()).isNotNull();
     assertThat(reviews.get(0).getId()).isNotNull();
-    assertThat(reviews.get(0).getRating()).isEqualTo(6);
+    assertThat(reviews.get(0).getRating()).isEqualTo(3);
 
   }
 
