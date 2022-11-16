@@ -4,12 +4,12 @@ spring:
   sql:
     init:
       platform: postgresql
-      mode: always
+      mode: never
     output:
       ansi:
         enabled: always
   datasource:
-    url: jdbc:postgres://mouse.db.elephantsql.com/trsdjhyx
+    url: jdbc:postgresql://mouse.db.elephantsql.com:5432/trsdjhyx
     username: ${POSTGRES_USR}
     password: ${POSTGRES_PWD}
     hikari:
